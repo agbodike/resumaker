@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  month: 2014-02-18
+  university: MyString
+  degree: MyString
+  major: MyString
+  resume_id: 
+
+two:
+  month: 2014-02-18
+  university: MyString
+  degree: MyString
+  major: MyString
+  resume_id: 
