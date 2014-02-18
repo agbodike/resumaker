@@ -1,4 +1,6 @@
 Resumaker::Application.routes.draw do
+  resources :educations
+
   resources :resumes
 
   # The priority is based upon order of creation: first created -> highest priority.
