@@ -1,5 +1,5 @@
 class Education < ActiveRecord::Base
   belongs_to :resume
 
-  validates :title, :name, presence: true
+  validates :month, :university, :degree, :major, presence: true
 end

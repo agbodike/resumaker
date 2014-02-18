@@ -5,11 +5,11 @@ one:
   university: MyString
   degree: MyString
   major: MyString
-  resume_id: 
+  resume_id: 1
 
 two:
   month: 2014-02-18
   university: MyString
   degree: MyString
   major: MyString
-  resume_id: 
+  resume_id: 1
