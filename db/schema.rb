@@ -11,7 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140217012427) do
+ActiveRecord::Schema.define(version: 20140218152723) do
+
+  create_table "educations", force: true do |t|
+    t.date     "month"
+    t.string   "university"
+    t.string   "degree"
+    t.string   "major"
+    t.integer  "resume_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "educations", ["resume_id"], name: "index_educations_on_resume_id"
 
   create_table "resumes", force: true do |t|
     t.string   "title"
