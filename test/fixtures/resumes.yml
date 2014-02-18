@@ -1,18 +1,18 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  title: MyString
-  objective: MyString
-  name: MyString
-  address: MyString
-  city: MyString
-  state: MyString
-  postal_code: MyString
-  email: MyString
-  phone_number: MyString
+  title: Test Resume 1
+  objective: Find a job
+  name: Joe Jobseeker
+  address: 123 Main St
+  city: San Francisco
+  state: CA
+  postal_code: 12345
+  email: example@example.com
+  phone_number: 415-514-1234
 
 two:
-  title: MyString
+  title: Test Resume 2
   objective: MyString
   name: MyString
   address: MyString
