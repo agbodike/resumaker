@@ -1,4 +1,6 @@
 Resumaker::Application.routes.draw do
+  resources :experiences
+
   resources :educations
 
   resources :resumes
