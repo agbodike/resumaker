@@ -3,7 +3,8 @@
 <table>
   <thead>
     <tr>
-      <th>Month</th>
+      <th>Start Year</th>
+      <th>End Year</th>
       <th>University</th>
       <th>Degree</th>
       <th>Major</th>
@@ -17,7 +18,8 @@
   <tbody>
     <% @educations.each do |education| %>
       <tr>
-        <td><%= education.month %></td>
+        <td><%= education.start_year %></td>
+	<td><%= education.end_year %></td>
         <td><%= education.university %></td>
         <td><%= education.degree %></td>
         <td><%= education.major %></td>
