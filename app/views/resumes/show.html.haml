@@ -1,0 +1,30 @@
+%p.notice= notice
+%p
+  %strong Title:
+  = @resume.title
+%p
+  %strong Objective:
+  = @resume.objective
+%p
+  %strong Name:
+  = @resume.name
+%p
+  %strong Address:
+  = @resume.address
+%p
+  %strong City:
+  = @resume.city
+%p
+  %strong State:
+  = @resume.state
+%p
+  %strong Postal code:
+  = @resume.postal_code
+%p
+  %strong Email:
+  = @resume.email
+%p
+  %strong Phone number:
+  = @resume.phone_number
+= link_to 'Edit', edit_resume_path(@resume) |
+= link_to 'Back', resumes_path
