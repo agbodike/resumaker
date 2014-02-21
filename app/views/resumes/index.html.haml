@@ -1,0 +1,33 @@
+%h1 Listing resumes
+%table
+  %thead
+    %tr
+      %th Title
+      %th Objective
+      %th Name
+      %th Address
+      %th City
+      %th State
+      %th Postal code
+      %th Email
+      %th Phone number
+      %th
+      %th
+      %th
+  %tbody
+    - @resumes.each do |resume|
+      %tr
+        %td= resume.title
+        %td= resume.objective
+        %td= resume.name
+        %td= resume.address
+        %td= resume.city
+        %td= resume.state
+        %td= resume.postal_code
+        %td= resume.email
+        %td= resume.phone_number
+        %td= link_to 'Show', resume
+        %td= link_to 'Edit', edit_resume_path(resume)
+        %td= link_to 'Destroy', resume, method: :delete, data: { confirm: 'Are you sure?' }
+%br
+= link_to 'New Resume', new_resume_path
