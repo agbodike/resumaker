@@ -1,0 +1,22 @@
+%p#notice= notice
+%p
+  %strong Start Year:
+  = @education.start_year
+%p
+  %strong End Year:
+  = @education.end_year
+%p
+  %strong University:
+  = @education.university
+%p
+  %strong Degree:
+  = @education.degree
+%p
+  %strong Major:
+  = @education.major
+%p
+  %strong Resume:
+  = @education.resume
+= link_to 'Edit', edit_education_path(@education)
+|
+\#{link_to 'Back', educations_path}
