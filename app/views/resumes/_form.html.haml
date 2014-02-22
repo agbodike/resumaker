@@ -37,7 +37,7 @@
     = f.text_area :objective, rows: 6, columns: 60
   .actions
     = f.submit
-  - f.fields_for :educations do |ff|
+  = f.fields_for :educations do |ed_form|
     .field
-      = ff.label :university
-      = ff.text_field :university
+      = ed_form.label :university
+      = ed_form.text_field :university
