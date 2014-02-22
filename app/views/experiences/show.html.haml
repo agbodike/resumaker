@@ -1,0 +1,25 @@
+%p#notice= notice
+%p
+  %strong Company:
+  = @experience.company
+%p
+  %strong Job title:
+  = @experience.job_title
+%p
+  %strong Location:
+  = @experience.location
+%p
+  %strong Description:
+  = @experience.description
+%p
+  %strong Start date:
+  = @experience.start_date
+%p
+  %strong End date:
+  = @experience.end_date
+%p
+  %strong Resume:
+  = @experience.resume
+= link_to 'Edit', edit_experience_path(@experience)
+|
+\#{link_to 'Back', experiences_path}
