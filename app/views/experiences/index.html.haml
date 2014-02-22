@@ -21,7 +21,7 @@
         %td= experience.description
         %td= experience.start_date
         %td= experience.end_date
-        %td= experience.resume
+        %td= link_to experience.resume.title, experience.resume
         %td= link_to 'Show', experience
         %td= link_to 'Edit', edit_experience_path(experience)
         %td= link_to 'Destroy', experience, method: :delete, data: { confirm: 'Are you sure?' }
