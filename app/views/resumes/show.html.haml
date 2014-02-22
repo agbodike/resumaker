@@ -1,30 +1,33 @@
 %p.notice= notice
-%p
-  %strong Title:
-  = @resume.title
-%p
-  %strong Objective:
+%section.contact_info
+  %section.name
+    %strong= @resume.name
+  %section.address
+    #{@resume.address},
+    #{@resume.city},
+    = @resume.state
+    = @resume.postal_code
+  %section.email
+    = @resume.email
+  %section.phone
+    = @resume.phone_number
+%section.objective
+  %h3 Objective:
   = @resume.objective
-%p
-  %strong Name:
-  = @resume.name
-%p
-  %strong Address:
-  = @resume.address
-%p
-  %strong City:
-  = @resume.city
-%p
-  %strong State:
-  = @resume.state
-%p
-  %strong Postal code:
-  = @resume.postal_code
-%p
-  %strong Email:
-  = @resume.email
-%p
-  %strong Phone number:
-  = @resume.phone_number
+
+- if @resume.educations.count > 0
+  %section.education
+    %h3 Education:
+    - @resume.educations.each do |education|
+      = education.university
+
+- if @resume.experiences.count > 0
+  %section.experience
+    %h3 Experience:
+    - @resume.experiences.each do |experience|
+      %h3 Education:
+      = education.university
+
+%br
 = link_to 'Edit', edit_resume_path(@resume) |
 = link_to 'Back', resumes_path
