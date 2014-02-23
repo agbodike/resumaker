@@ -12,6 +12,9 @@ p, ol, ul, td {
   line-height: 18px;
 }
 
+td { padding: 4px 8px; margin: 0; border: 0; }
+table { border-collapse: collapse; }
+
 pre {
   background-color: #eee;
   padding: 10px;
@@ -67,3 +70,5 @@ div {
     list-style: square;
   }
 }
+.even { background: #e0f8f8; }
+.odd  { background: #ffffff; }

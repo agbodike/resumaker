@@ -3,29 +3,19 @@
   %thead
     %tr
       %th Title
-      %th Objective
       %th Name
-      %th Address
-      %th City
-      %th State
-      %th Postal code
       %th Email
-      %th Phone number
+      %th Objective
       %th
       %th
       %th
   %tbody
     - @resumes.each do |resume|
-      %tr
+      %tr{:class => cycle('odd', 'even')}
         %td= resume.title
-        %td= resume.objective
         %td= resume.name
-        %td= resume.address
-        %td= resume.city
-        %td= resume.state
-        %td= resume.postal_code
         %td= resume.email
-        %td= resume.phone_number
+        %td= truncate(resume.objective, :length => 35, :separator => ' ')
         %td= link_to 'Show', resume
         %td= link_to 'Edit', edit_resume_path(resume)
         %td= link_to 'Destroy', resume, method: :delete, data: { confirm: 'Are you sure?' }
