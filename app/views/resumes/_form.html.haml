@@ -37,12 +37,20 @@
     = f.text_area :objective, rows: 6, columns: 60
   .actions
     = f.submit
-  = f.fields_for :educations do |ed|
-    /= render :partial => '/educations/form', :education => ed
-    .field
-      = ed.label :university
-      = ed.text_field :university
-    - if ed.object.persisted?
-      = ed.check_box :_destroy
-      = ed.label :_destroy, "Destroy"
+  - if @resume.educations.count > 0
+    %table
+      %thead
+        %tr
+          %td University
+          %td Degree
+          %td Major
+        = f.fields_for :educations do |ed|
+          %tr
+            %td= ed.text_field :university
+            %td= ed.text_field :degree
+            %td= ed.text_field :major
+            - if ed.object.persisted?
+              %td
+                = ed.check_box :_destroy
+                = ed.label :_destroy, "Remove"
 %br
