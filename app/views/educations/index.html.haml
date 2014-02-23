@@ -19,7 +19,8 @@
         %td= education.university
         %td= education.degree
         %td= education.major
-        %td= link_to education.resume.title, education.resume
+        - if education.resume
+          %td= link_to education.resume.title, education.resume
         %td= link_to 'Show', education
         %td= link_to 'Edit', edit_education_path(education)
         %td= link_to 'Destroy', education, method: :delete, data: { confirm: 'Are you sure?' }

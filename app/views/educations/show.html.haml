@@ -14,9 +14,10 @@
 %p
   %strong Major:
   = @education.major
-%p
-  %strong Resume:
-  = link_to @education.resume.title, @education.resume
+- if @education.resume
+  %p
+    %strong Resume:
+    = link_to @education.resume.title, @education.resume
 = link_to 'Edit', edit_education_path(@education)
 |
 \#{link_to 'Back', educations_path}
