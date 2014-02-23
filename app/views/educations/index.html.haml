@@ -2,8 +2,8 @@
 %table
   %thead
     %tr
-      %th Start Year
-      %th End Year
+      %th Started
+      %th Graduated
       %th University
       %th Degree
       %th Major
@@ -13,7 +13,7 @@
       %th
   %tbody
     - @educations.each do |education|
-      %tr
+      %tr{:class => cycle('odd', 'even')}
         %td= education.start_year
         %td= education.end_year
         %td= education.university
@@ -22,8 +22,8 @@
         %td
           - if education.resume
             = link_to education.resume.title, education.resume
-        %td= link_to 'Show', education
-        %td= link_to 'Edit', edit_education_path(education)
-        %td= link_to 'Destroy', education, method: :delete, data: { confirm: 'Are you sure?' }
+        %td.ctl= link_to 'Show', education
+        %td.ctl= link_to 'Edit', edit_education_path(education)
+        %td.ctl= link_to 'Destroy', education, method: :delete, data: { confirm: 'Are you sure?' }
 %br/
 = link_to 'New Education', new_education_path
