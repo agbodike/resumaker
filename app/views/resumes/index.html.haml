@@ -16,9 +16,9 @@
         %td= resume.name
         %td= resume.email
         %td= truncate(resume.objective, :length => 35, :separator => ' ')
-        %td= link_to 'Show', resume
-        %td= link_to 'Edit', edit_resume_path(resume)
-        %td= link_to 'Destroy', resume, method: :delete, data: { confirm: 'Are you sure?' }
+        %td.ctl= link_to 'Show', resume
+        %td.ctl= link_to 'Edit', edit_resume_path(resume)
+        %td.ctl= link_to 'Destroy', resume, method: :delete, data: { confirm: 'Are you sure?' }
 %br
 = link_to 'New Resume', new_resume_path
 %br
