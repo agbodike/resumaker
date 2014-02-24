@@ -36,28 +36,27 @@
     = f.text_area :objective, rows: 6, cols: 60
   .actions
     = f.submit
-  - if @resume.educations.count > 0
-    %fieldset.resume#education
-      %legend Education
-      %table
-        %thead
+  %fieldset.resume#education
+    %legend Education
+    %table
+      %thead
+        %tr
+          %th University
+          %th Degree
+          %th Major
+          %th Started
+          %th Graduated
+          %th
+      %tbody
+        = f.fields_for :educations do |ed|
           %tr
-            %th University
-            %th Degree
-            %th Major
-            %th Started
-            %th Graduated
-            %th
-        %tbody
-          = f.fields_for :educations do |ed|
-            %tr
-              %td= ed.text_field :university
-              %td= ed.text_field :degree
-              %td= ed.text_field :major
-              %td= ed.text_field :start_year
-              %td= ed.text_field :end_year
-              - if ed.object.persisted?
-                %td
-                  = ed.check_box :_destroy
-                  = ed.label :_destroy, "Remove"
+            %td= ed.text_field :university
+            %td= ed.text_field :degree
+            %td= ed.text_field :major
+            %td= ed.text_field :start_year
+            %td= ed.text_field :end_year
+            - if ed.object.persisted?
+              %td
+                = ed.check_box :_destroy
+                = ed.label :_destroy, "Remove"
 %br

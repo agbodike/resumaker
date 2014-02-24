@@ -69,6 +69,8 @@ class ResumesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def resume_params
-      params.require(:resume).permit(:title, :objective, :name, :address, :city, :state, :postal_code, :email, :phone_number)
+      params.require(:resume).permit(:title, :objective, :name, :address, :city, :state, :postal_code, :email, :phone_number,
+                                     educations_attributes:
+                                       [:university, :degree, :major, :start_year, :end_year])
     end
 end
