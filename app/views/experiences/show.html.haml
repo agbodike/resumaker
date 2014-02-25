@@ -19,7 +19,8 @@
   = @experience.end_date
 %p
   %strong Resume:
-  = link_to @experience.resume.title, @experience.resume
+  - if @experience.resume
+    = link_to @experience.resume.title, @experience.resume
 = link_to 'Edit', edit_experience_path(@experience)
 |
 \#{link_to 'Back', experiences_path}

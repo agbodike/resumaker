@@ -25,8 +25,7 @@
   %section.experience
     %h3 Experience:
     - @resume.experiences.each do |experience|
-      %h3 Education:
-      = education.university
+      = experience.company
 
 %br
 = link_to 'Edit', edit_resume_path(@resume) |
