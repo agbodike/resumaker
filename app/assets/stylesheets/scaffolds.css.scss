@@ -15,8 +15,16 @@ p, ol, ul, td {
 table { border-collapse: collapse; }
 td { padding: 4px 8px; margin: 0; border: 0; }
 th { padding: 4px 8px; margin: 0; border: 0; border-bottom: 1px solid; text-align: left; }
-td.ctl { padding: 4px; font-size: smaller; font-weight: bold; }
-td.ctl a { text-decoration: none; }
+td.ctl { padding: 4px 0; font-size: smaller; font-weight: bold; }
+td.ctl a {
+  text-decoration: none;
+  color: #666;
+  padding: 0 4px;
+  &:hover {
+    color: #fff;
+    background-color: #666;
+  }
+}
 
 .field label { min-width: 120px; display: inline-block; text-align: right; padding-right: 10px; }
 .field > label:after {
