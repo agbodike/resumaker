@@ -16,16 +16,23 @@
   = @resume.objective
 
 - if @resume.educations.count > 0
-  %section.education
+  %section.educations
     %h3 Education:
-    - @resume.educations.each do |education|
-      = education.university
+    - @resume.educations.each do |ed|
+      .duration= "#{ed.start_year} - #{ed.end_year}"
+      = ed.university
 
 - if @resume.experiences.count > 0
-  %section.experience
+  %section.experiences
     %h3 Experience:
-    - @resume.experiences.each do |experience|
-      = experience.company
+    - @resume.experiences.each do |ex|
+      .experience
+        .duration= "#{ex.start_date} - #{ex.end_date}"
+        .position
+          %h2= ex.job_title
+          %h3= ex.company
+        .location
+          = ex.location
 
 %br
 = link_to 'Edit', edit_resume_path(@resume) |
