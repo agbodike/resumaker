@@ -49,4 +49,5 @@ gem 'haml'
 gem 'sass'
 gem "haml-rails", :group => :development
 gem "compass"
+gem "compass-rails"
 
