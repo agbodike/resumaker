@@ -35,7 +35,6 @@
     = f.label :objective
     = f.text_area :objective, rows: 6, cols: 60
   .actions
-    = f.submit
   %fieldset.resume#education
     %legend Education
     %table
@@ -84,4 +83,6 @@
               %td
                 = ex.check_box :_destroy
                 = ex.label :_destroy, "Remove"
+  %br
+  = f.submit
 %br
