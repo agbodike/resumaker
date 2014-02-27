@@ -1,0 +1,16 @@
+= form_for @experience_item do |f|
+  - if @experience_item.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@experience_item.errors.count, "error")} prohibited this experience_item from being saved:"
+      %ul
+        - @experience_item.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :description
+    = f.text_area :description
+  .field
+    = f.label :experience
+    = f.text_field :experience
+  .actions
+    = f.submit 'Save'

@@ -1,4 +1,6 @@
 Resumaker::Application.routes.draw do
+  resources :experience_items
+
   resources :experiences
 
   resources :educations

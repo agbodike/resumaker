@@ -1,0 +1,12 @@
+%p#notice= notice
+
+%p
+  %b Description:
+  = @experience_item.description
+%p
+  %b Experience:
+  = @experience_item.experience
+
+= link_to 'Edit', edit_experience_item_path(@experience_item)
+\|
+= link_to 'Back', experience_items_path
