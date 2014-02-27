@@ -33,6 +33,10 @@
           %h3= ex.company
         .location
           = ex.location
+        - if ex.experience_items.count > 0
+          %ul.items
+            - ex.experience_items.each do |item|
+              %li= item.description
 
 %br
 = link_to 'Edit', edit_resume_path(@resume) |
