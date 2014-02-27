@@ -83,6 +83,16 @@
               %td
                 = ex.check_box :_destroy
                 = ex.label :_destroy, "Remove"
+            = ex.fields_for :experience_items do |item|
+              %tr.exp_item
+                %th
+                  - if (first=true)..false and first
+                    %span Experience items
+                %td{:colspan => 5 }= item.text_field :description
+                - if item.object.persisted?
+                  %td
+                    = ex.check_box :_destroy
+                    = ex.label :_destroy, "Remove"
   %br
   = f.submit
 %br
