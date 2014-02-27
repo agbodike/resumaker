@@ -1,6 +1,6 @@
 module FormHelper
   def setup_resume(resume)
-    resume.educations << Education.new unless resume.educations.count > 0
+    resume.educations << Education.new
     resume.experiences << Experience.new
     resume
   end
