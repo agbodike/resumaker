@@ -4,4 +4,7 @@
 ul.items li {
   list-style: round;
 }
-tr.exp_item th { border: none; font-size: smaller;}
+tr.exp_item th { border: none; font-size: smaller; }
+tr.exp_item input[type="text"] { width: 99%; }
+/* table.exp td:nth-child(2) { background:#ff0000; } */
+
